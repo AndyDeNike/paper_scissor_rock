@@ -22,24 +22,31 @@ function convert2Word(letter) {
 }
 
 function win(userChoice, computerChoice) {
+    const userChoice_div = document.getElementById(userChoice)
     userScore++;
-    userScore_span.innerHTML = userScore 
-    const smallUserWord = "user".fontsize(3).sub();
-    const smallCompWord = "comp".fontsize(3).sub();
-    result_p.innerHTML = `${convert2Word(userChoice)}${smallUserWord} beats ${convert2Word(computerChoice)}${smallCompWord}. You win the chocolate factory!`;
+    userScore_span.innerHTML = userScore;
+    result_p.innerHTML = `${convert2Word(userChoice)}(User) beats ${convert2Word(computerChoice)}(Comp). You win the chocolate factory!`;
     // result_p.innerHTML = convert2Word(userChoice) + " beats " + convert2Word(computerChoice) + ". You win the chocolate factory!";
+    userChoice_div.classList.add('green-glow');
+    // setTimeout(function() {userChoice_div.classList.remove('green-glow')}, 300);
+    setTimeout(() => userChoice_div.classList.remove('green-glow'), 300);
 }
 
-function lose() {
-    userScore++;
-    userScore_span.innerHTML = userScore 
+function lose(userChoice, computerChoice) {
+    const userChoice_div = document.getElementById(userChoice)
+    computerScore++;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convert2Word(userChoice)} beats ${convert2Word(computerChoice)}. You win the chocolate factory!`;
+    result_p.innerHTML = `${convert2Word(userChoice)}(User) loses to ${convert2Word(computerChoice)}(Comp). You lose! Good Day Sir!!!!`;
     // result_p.innerHTML = convert2Word(userChoice) + " beats " + convert2Word(computerChoice) + ". You win the chocolate factory!";
+    userChoice_div.classList.add('red-glow');
+    setTimeout(() => userChoice_div.classList.remove('red-glow'), 300);
 }
 
-function draw() {
-    console.log("DRAW")
+function draw(userChoice, computerChoice) {
+    const userChoice_div = document.getElementById(userChoice)
+    result_p.innerHTML = `${convert2Word(userChoice)}(User) is equal to ${convert2Word(computerChoice)}(Comp). Draw!`;
+    userChoice_div.classList.add('gray-glow');
+    setTimeout(() => userChoice_div.classList.remove('gray-glow'), 300);
 }
 
 function game(userChoice) {
@@ -64,13 +71,9 @@ function game(userChoice) {
 }
 
 function main() {
-    paper_div.addEventListener('click', function(){
-        game("p");
-    })
+    paper_div.addEventListener('click', () => game("p"));
 
-    scissor_div.addEventListener('click', function(){
-        game("s");
-    })
+    scissor_div.addEventListener('click', () => game("s"));
 
     rock_div.addEventListener('click', function(){
         game("r");
