@@ -30,12 +30,12 @@ function reset() {
 
 function winner() {
     if (userScore === 10){
-        result_p.innerHTML = "YOU HAVE WON RICHES BEYOND YOUR WILDEST DREAMS! PLAY AGAIN?";
+        result_p.innerHTML = "YOU ARE A CALCULATED GENIUS AND A PATRIOT! PLAY AGAIN?";
         result_p.classList.add('greenwin');
         setTimeout(() => result_p.classList.remove('greenwin'), 1000);
         reset();
     } else if (computerScore === 10){
-        result_p.innerHTML = "The robots have invaded and destroyed humanity...play again?";
+        result_p.innerHTML = "The robots have destroyed humanity...play again?";
         result_p.classList.add('redlose');
         setTimeout(() => result_p.classList.remove('redlose'), 1000);
         reset();
@@ -67,7 +67,7 @@ function lose(userChoice, computerChoice) {
 
 function draw(userChoice, computerChoice) {
     const userChoice_div = document.getElementById(userChoice)
-    result_p.innerHTML = `${convert2Word(userChoice)}(You) is equal to ${convert2Word(computerChoice)}(Comp). Draw!`;
+    result_p.innerHTML = `${convert2Word(userChoice)}(You) is equal to ${convert2Word(computerChoice)}(Comp). We Gon Call This a Draw!`;
     userChoice_div.classList.add('gray-glow');
     setTimeout(() => userChoice_div.classList.remove('gray-glow'), 300);
 }
