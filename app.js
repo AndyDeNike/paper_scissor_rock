@@ -46,7 +46,7 @@ function win(userChoice, computerChoice) {
     const userChoice_div = document.getElementById(userChoice)
     userScore++;
     userScore_span.innerHTML = userScore;
-    result_p.innerHTML = `${convert2Word(userChoice)}(You) beats ${convert2Word(computerChoice)}(Comp). The chocolate factory is in your grasp!`;
+    result_p.innerHTML = `${convert2Word(userChoice)}(You) beats ${convert2Word(computerChoice)}(Comp). We are all very proud of you!`;
     // result_p.innerHTML = convert2Word(userChoice) + " beats " + convert2Word(computerChoice) + ". You win the chocolate factory!";
     userChoice_div.classList.add('green-glow');
     // setTimeout(function() {userChoice_div.classList.remove('green-glow')}, 300);
