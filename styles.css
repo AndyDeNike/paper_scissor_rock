@@ -15,21 +15,6 @@ header {
     background: white;
 }
 
-.green-glow {
-    border: #4dcc7d 4px solid;
-    box-shadow: 0 0 10px #31b43a
-}
-
-.red-glow {
-    border: 4px solid #fc121b;
-    box-shadow: 0 0 10px #25292b;
-}
-
-.gray-glow {
-    border: 4px solid #464647;
-    box-shadow: 0 0 10px #25292b;
-}
-
 header > h1 {
     color: #24272E;
     text-align: center;
@@ -107,6 +92,18 @@ img {
     margin-top: 20px;
 }
 
+.green-glow {
+    border: #4dcc7d 4px solid;
+    box-shadow: 0 0 10px #31b43a
+}
 
+.red-glow {
+    border: 4px solid #fc121b;
+    box-shadow: 0 0 10px #25292b;
+}
 
+.gray-glow {
+    border: 4px solid #464647;
+    box-shadow: 0 0 10px #25292b;
+}
 
