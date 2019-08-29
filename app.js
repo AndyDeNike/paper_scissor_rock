@@ -67,7 +67,7 @@ function lose(userChoice, computerChoice) {
 
 function draw(userChoice, computerChoice) {
     const userChoice_div = document.getElementById(userChoice)
-    result_p.innerHTML = `${convert2Word(userChoice)}(You) is equal to ${convert2Word(computerChoice)}(Comp). We Gon Call This a Draw!`;
+    result_p.innerHTML = `${convert2Word(userChoice)}(You) is equal to ${convert2Word(computerChoice)}(Comp). We Call This a Draw!`;
     userChoice_div.classList.add('gray-glow');
     setTimeout(() => userChoice_div.classList.remove('gray-glow'), 300);
 }
